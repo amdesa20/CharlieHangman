@@ -1,3 +1,4 @@
+import random
 word = ("Bread")
 wordList = list(word.lower())
 updatedSpaces = []
@@ -5,6 +6,10 @@ wordLen = len(word)
 lives = 5
 letter = " "
 
+def intialize ():
+    spaces = "___"
+    print(spaces), len(word)
+    
 for i in range (0, int(wordLen)):
     updatedSpaces.append("_")  
 def getLetter():
@@ -34,9 +39,10 @@ def check():
                 getLetter()
             else:
                 print("Out of lives: Game Over   ")
-                
-def game():
+def main ():
+    intialize()
     getLetter()
-    check()
+    check()    
+
     
-game()                      
+main()                      
